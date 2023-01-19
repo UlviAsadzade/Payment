@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <section id="payment-section">
+        <div class="payment">
+            <div class="payment-header">
+                <h2>Kart bilgileri</h2>
+                <form action="" id="payment-form">
+                    <div class="input-label">
+                        <input class="card-number" type="tel" name="" id="" required pattern="(\d{4}\s?){4}"
+                            maxlength="19">
+                        <label class="big-label" for="">Kart Numarası</label>
+                        <div class="hidden-card"></div>
+                    </div>
+                    <div class="month-cvv">
+                        <div class="input-label half-input">
+                            <input class="card-date" minlength="5" maxlength="5" type="text" name="" id="" required>
+                            <label for="">Ay / Yıl</label>
+                        </div>
+                        <div class="input-label half-input">
+                            <input class="card-cvv" type="password" name="" id="" required minlength="3" maxlength="3">
+                            <label for="">CVV</label>
+                        </div>
+                    </div>
+                    <div class="input-label">
+                        <input class="card-name"  type="text" name="" id="" required>
+                        <label  for="">Kart Sahibinin Adı</label>
+                    </div>
+                </form>
+
+                <p class="payment-text">
+                    Kart Bilgileriniz Ödeme Aracı Kurumumuz tarafından güvenle saklanmaktadır.
+                </p>
+
+                <div class="payment-cards">
+                    <img class="american-express" src="./assets/images/amex.png" alt="">
+                    <img class="mastercard" src="./assets/images//mastercard.png" alt="">
+                    <img class="visa" src="./assets/images//visa.png" alt="">
+                    <img class="troy" src="./assets/images//troy.png" alt="">
+
+                </div>
+            </div>
+
+            <div class="payment-footer">
+                <button class="payment-submit" form="payment-form" type="submit">Öde 120.96
+                    <span>&#8378;</span></button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./assets/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Pro Display 200', sans-serif;
+}
+
+#payment-section {
+    background: url('./images/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 1440px;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+    #payment-section {
+        width: 100%;
+        background-position: inherit;
+    }
+
+    #payment-section::after {
+        background-color: red;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #payment-section {
+        width: 100%;
+        height: 90vh;
+        background: none;
+    }
+}
+
+
+.payment {
+    position: absolute;
+    background-color: #fff;
+    width: 498px;
+    height: 540px;
+    padding: 40px 24px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 120px;
+    top: 100px;
+    border-radius: 16px;
+}
+
+.payment h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    color: #000170;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+@media screen and (max-width: 1300px) {
+    .payment {
+        height: 510px;
+        top: 40px;
+    }
+
+}
+
+@media screen and (min-width: 540px) and (max-width: 1300px) {
+    .payment h2 {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .payment {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .payment h2 {
+        margin-bottom: 36px;
+    }
+}
+
+
+.payment form .input-label {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.payment form .input-label .hidden-card {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.payment form .input-label .hidden-card.hidden-amex {
+    background: url("./images/amex.png");
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
+
+.payment form .input-label .hidden-card.hidden-master {
+    background: url("./images/mastercard.png");
+    width: 30px;
+    height: 24px;
+    background-size: cover;
+}
+
+.payment form .input-label .hidden-card.hidden-visa {
+    background: url("./images/visa.png");
+    width: 44px;
+    height: 14px;
+    background-size: cover;
+}
+
+.payment form .input-label .hidden-card.hidden-troy {
+    background: url("./images/troy.png");
+    width: 44px;
+    height: 14px;
+    background-size: cover;
+}
+
+.payment form .input-label input {
+    width: 100%;
+    border: 1px solid #E5E6E8;
+    border-radius: 8px;
+    height: 50px;
+    padding-left: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #424242;
+    outline: none;
+}
+
+.payment form .input-label input:focus {
+    border: 1px solid red;
+}
+
+.payment form .input-label input:valid {
+    border: 1px solid #000170;
+}
+
+
+.payment form .input-label label {
+    position: absolute;
+    background-color: #fff;
+    color: #8B94A0;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-weight: 500;
+}
+
+.payment form .input-label label.big-label {
+    min-width: 160px;
+}
+
+.payment form .input-label input:focus+label {
+    color: red;
+    font-size: 12px;
+    top: 0px;
+    left: 16px;
+    padding: 0 4px;
+
+}
+
+.payment form .input-label input:valid+label {
+    font-size: 12px;
+    top: 0px;
+    left: 16px;
+    color: #000170;
+    padding: 0 4px;
+}
+
+.payment form .input-label input:focus+label.big-label, .payment form .input-label input:valid+label.big-label {
+    min-width: max-content;
+}
+
+.payment form .month-cvv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment form .month-cvv .half-input {
+    width: 48%;
+}
+
+.payment .payment-text {
+    width: 90%;
+    line-height: 24px;
+    color: #424242;
+    margin-top: 28px;
+}
+
+.payment .payment-cards {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+@media screen and (max-width: 540px) {
+    .payment .payment-cards {
+        margin-top: 32px;
+    }
+}
+
+.payment .payment-cards .american-express {
+    width: 24px;
+    height: 24px;
+}
+
+.payment .payment-cards .mastercard {
+    width: 30px;
+    height: 24px;
+}
+
+.payment .payment-cards .visa {
+    width: 44px;
+    height: 14px;
+}
+
+.payment .payment-cards .troy {
+    width: 44px;
+    height: 20px;
+}
+
+.payment .payment-submit {
+    width: 100%;
+    height: 56px;
+    background-color: #000170;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+}
